@@ -55,7 +55,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: white;
+    color: white; /* Sets the navigation link color to white for visibility */
     text-decoration: none;
     font-weight: bold;
 }
@@ -89,7 +89,7 @@ footer {
 }
 
 a {
-    color: #4a90e2;
+    color: #4a90e2; /* Default link color in main content */
     text-decoration: none;
 }
 
