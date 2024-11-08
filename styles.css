@@ -1,4 +1,4 @@
-/* Reset some default styling for consistency */
+/* Reset default styling for consistency */
 * {
     margin: 0;
     padding: 0;
@@ -13,6 +13,7 @@ body {
     margin: 20px;
 }
 
+/* Header Styling */
 header {
     text-align: center;
     padding: 20px;
@@ -20,26 +21,50 @@ header {
     color: white;
 }
 
+.header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.headshot {
+    width: 150px;
+    border-radius: 50%;
+    margin: 10px 0;
+}
+
 header h1 {
     font-size: 2em;
-    margin-bottom: 10px;
+    margin: 10px 0;
 }
 
 header p {
-    margin: 5px;
-    font-size: 1.2em;
+    margin: 5px 0;
 }
 
-/* Headshot Image Styling */
-.headshot {
-    width: 150px; /* You can adjust this size to be smaller if needed */
-    max-width: 100%; /* Ensures it doesn’t exceed the screen width */
-    height: auto; /* Maintains aspect ratio */
-    border-radius: 50%; /* Makes it a circle */
-    margin-top: 10px;
+/* Navigation Bar Styling */
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 10px 0;
 }
 
+nav ul li {
+    margin: 0 15px;
+}
 
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Main Content Styling */
 main {
     max-width: 800px;
     margin: 20px auto;
@@ -54,27 +79,20 @@ h2 {
     margin-bottom: 10px;
 }
 
-section {
-    margin-bottom: 20px;
-}
-
+/* Footer Styling */
 footer {
     text-align: center;
+    margin-top: 20px;
     padding: 10px;
     font-size: 0.9em;
     color: #666;
 }
 
-@media (max-width: 600px) {
-    body {
-        margin: 10px;
-    }
+a {
+    color: #4a90e2;
+    text-decoration: none;
+}
 
-    header h1 {
-        font-size: 1.5em;
-    }
-
-    header p, footer {
-        font-size: 1em;
-    }
+a:hover {
+    text-decoration: underline;
 }
