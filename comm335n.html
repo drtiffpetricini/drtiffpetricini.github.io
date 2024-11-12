@@ -139,15 +139,23 @@
             color: white;
         }
 
-        /* Expectations List */
-        .expectations-guide ul {
-            list-style-type: none;
-            padding: 0;
+        /* Expectations Bubble Design */
+        .expectations-guide {
+            margin-top: 2em;
         }
 
-        .expectations-guide ul li {
-            padding: 8px 0;
-            border-bottom: 1px solid #ddd;
+        .expectations-bubble {
+            background-color: #e0f3ff;
+            border: 1px solid #b6e0ff;
+            border-radius: 20px;
+            padding: 15px;
+            margin: 10px 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .expectations-bubble strong {
+            color: #4a90e2;
+            font-size: 1.1em;
         }
 
         /* Contact Section Styling */
@@ -243,7 +251,6 @@
         <!-- Grading Menu Section -->
         <section class="grading-menu">
             <h2>Grading Menu</h2>
-            <p>Choose your final grade based on your engagement with course assignments:</p>
             <table>
                 <thead>
                     <tr>
@@ -277,16 +284,21 @@
             <img src="glenn-carstens-peters-RLw-UC03Gwc-unsplash.jpg" alt="Checklist" class="decorative-image">
         </section>
 
-        <!-- Expectations Guide Section -->
+        <!-- Expectations Guide Section with Bubbles -->
         <section class="expectations-guide">
             <h2>Expectations Guide</h2>
-            <p>Assignments will be evaluated based on the following standards:</p>
-            <ul>
-                <li><strong>Exceeds Expectations:</strong> Demonstrates a deep understanding and application of course concepts with creative or thorough engagement.</li>
-                <li><strong>Meets Expectations:</strong> Shows good understanding of concepts and fulfills all assignment requirements.</li>
-                <li><strong>Basic:</strong> Covers the assignment requirements but lacks depth or full engagement with the material.</li>
-                <li><strong>Does Not Meet Expectations:</strong> Does not adequately address the assignment requirements or demonstrates minimal understanding.</li>
-            </ul>
+            <div class="expectations-bubble">
+                <strong>Exceeds Expectations:</strong> Demonstrates a deep understanding and application of course concepts with creative or thorough engagement.
+            </div>
+            <div class="expectations-bubble">
+                <strong>Meets Expectations:</strong> Shows good understanding of concepts and fulfills all assignment requirements.
+            </div>
+            <div class="expectations-bubble">
+                <strong>Basic:</strong> Covers the assignment requirements but lacks depth or full engagement with the material.
+            </div>
+            <div class="expectations-bubble">
+                <strong>Does Not Meet Expectations:</strong> Does not adequately address the assignment requirements or demonstrates minimal understanding.
+            </div>
         </section>
 
         <!-- Collaborative Learning Pact Section -->
@@ -311,7 +323,7 @@
             </ul>
         </section>
 
-        <!-- Contact Information Section -->
+        <!-- Contact Section -->
         <section class="contact-info">
             <h2>How to Reach Me</h2>
             <p><strong>Professor:</strong> Dr. Tiffany A. Petricini</p>
