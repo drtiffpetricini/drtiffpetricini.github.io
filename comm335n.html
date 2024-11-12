@@ -5,6 +5,97 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>COMM 335N: Media, Social Justice, and the Public Humanities - Liquid Syllabus</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Styling for the header */
+        header {
+            color: white;
+            padding: 2em 1em;
+            text-align: center;
+            background-color: #4a90e2;
+        }
+
+        header h1, header p {
+            color: white;
+            text-shadow: 0px 1px 5px rgba(0, 0, 0, 0.7);
+        }
+
+        /* Basic Navigation Menu */
+        nav ul.main-nav {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            background-color: #4a90e2;
+            margin: 0;
+        }
+
+        nav ul.main-nav li {
+            position: relative;
+            margin: 0 10px;
+        }
+
+        nav ul.main-nav li a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            display: inline-block;
+            font-weight: bold;
+        }
+
+        nav ul.main-nav li a:hover, .dropdown .dropbtn:hover {
+            background-color: #357ab9;
+            border-radius: 5px;
+        }
+
+        /* Dropdown Menu Styling */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: white;
+            min-width: 200px;
+            padding: 0;
+            border-radius: 5px;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content li {
+            margin: 0;
+        }
+
+        .dropdown-content li a {
+            color: #4a90e2;
+            padding: 10px;
+            display: block;
+            text-decoration: none;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .dropdown-content li a:hover {
+            background-color: #f4f4f9;
+        }
+
+        /* Show dropdown on hover */
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        /* Remove bottom border on last item in dropdown */
+        .dropdown-content li:last-child a {
+            border-bottom: none;
+        }
+
+        /* Other Styles */
+        .decorative-image {
+            width: 100%;
+            max-width: 800px;
+            height: auto;
+            margin: 1em 0;
+            display: block;
+        }
+    </style>
 </head>
 <body>
 
@@ -12,9 +103,10 @@
         <h1>Welcome to COMM 335N</h1>
         <p>Media, Social Justice, and the Public Humanities</p>
         <p>Penn State Erie</p>
+        
         <!-- Navigation Menu -->
         <nav>
-            <ul>
+            <ul class="main-nav">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="publications.html">Publications</a></li>
                 <li><a href="media.html">Media Appearances</a></li>
@@ -22,9 +114,9 @@
                 <li><a href="class-pages.html">Class Pages</a></li>
                 <li><a href="philosophy.html">Teaching Philosophy</a></li>
                 
-                <!-- Course and Campus Policies Dropdown -->
+                <!-- Dropdown for Policies -->
                 <li class="dropdown">
-                    <span>Course and Campus Policies</span>
+                    <a href="#" class="dropbtn">Course and Campus Policies</a>
                     <ul class="dropdown-content">
                         <li><a href="classaiassignment.html">Course AI and Assignment Policies</a></li>
                         <li><a href="attendance.html">Attendance, Absence and Zoom Policies</a></li>
@@ -37,7 +129,16 @@
 
     <!-- Main Content -->
     <main>
-        <!-- Main course content here -->
+        <!-- Course Intro Section -->
+        <section class="intro-section">
+            <h2>Welcome!</h2>
+            <p>Hello! I’m Dr. Tiffany Petricini, and I’ll be your instructor for COMM 335N. This course explores the critical role of media in social justice and public humanities, providing you with hands-on experience in digital storytelling and community engagement. Here’s everything you need to get started and succeed!</p>
+            <p>Pronouns: she/her/hers | You’re welcome to call me Tiffany or Professor Petricini.</p>
+            <img src="annie-spratt-QckxruozjRg-unsplash.jpg" alt="Students collaborating on a project at a table" class="decorative-image">
+        </section>
+
+        <!-- Additional sections for course details, grading, expectations, etc., as needed -->
+
     </main>
 
     <footer>
