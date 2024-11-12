@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>COMM 335N: Media, Social Justice, and the Public Humanities - Liquid Syllabus</title>
     <style>
-        /* General Styles for Accessibility */
+        /* General Styles */
         body {
             font-family: Arial, sans-serif;
             font-size: 18px;
@@ -30,21 +30,31 @@
         }
 
         /* Basic Navigation Menu */
-        nav ul.main-nav {
-            list-style: none;
-            padding: 0;
-            display: flex;
-            justify-content: center;
+        .nav-container {
             background-color: #4a90e2;
-            margin: 0;
         }
 
-        nav ul.main-nav li {
+        nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        nav ul li {
             position: relative;
             margin: 0 10px;
         }
 
-        nav ul.main-nav li a, nav ul.main-nav li .dropbtn {
+        nav ul li a, nav ul li .dropbtn {
             color: white;
             text-decoration: none;
             padding: 10px 15px;
@@ -53,7 +63,7 @@
             transition: background-color 0.3s;
         }
 
-        nav ul.main-nav li a:hover, .dropdown .dropbtn:hover {
+        nav ul li a:hover, .dropdown .dropbtn:hover {
             background-color: #357ab9;
             border-radius: 5px;
         }
@@ -94,6 +104,42 @@
             display: block;
         }
 
+        /* Responsive Navigation */
+        .menu-icon {
+            display: none;
+            font-size: 24px;
+            color: white;
+            cursor: pointer;
+            padding: 10px;
+        }
+
+        .nav-container.active nav {
+            display: block;
+        }
+
+        @media (max-width: 768px) {
+            .menu-icon {
+                display: block;
+                text-align: center;
+            }
+
+            nav ul {
+                display: none;
+                flex-direction: column;
+                text-align: center;
+                width: 100%;
+            }
+
+            nav ul li {
+                width: 100%;
+                margin: 0;
+            }
+
+            .nav-container.active nav ul {
+                display: flex;
+            }
+        }
+
         /* Other Styles */
         .decorative-image {
             width: 100%;
@@ -103,7 +149,6 @@
             display: block;
         }
 
-        /* Main Content Section Styling */
         main {
             max-width: 800px;
             margin: 20px auto;
@@ -121,7 +166,6 @@
             color: #666;
         }
 
-        /* Grading Menu Table */
         .grading-menu table {
             width: 100%;
             border-collapse: collapse;
@@ -139,11 +183,6 @@
             color: white;
         }
 
-        /* Expectations Bubble Design */
-        .expectations-guide {
-            margin-top: 2em;
-        }
-
         .expectations-bubble {
             background-color: #e0f3ff;
             border: 1px solid #b6e0ff;
@@ -158,7 +197,6 @@
             font-size: 1.1em;
         }
 
-        /* Contact Section Styling */
         .contact-info {
             margin-top: 2em;
             padding: 1em;
@@ -170,10 +208,6 @@
         .contact-info h2 {
             color: #4a90e2;
             margin-bottom: 0.5em;
-        }
-
-        .contact-info p {
-            margin: 0.5em 0;
         }
 
         .contact-info a {
@@ -193,8 +227,11 @@
         <h1>Welcome to COMM 335N</h1>
         <p>Media, Social Justice, and the Public Humanities</p>
         <p>Penn State Erie</p>
-        
-        <!-- Navigation Menu -->
+    </header>
+
+    <!-- Responsive Navigation Menu -->
+    <div class="nav-container">
+        <span class="menu-icon" onclick="toggleMenu()">☰ Menu</span>
         <nav>
             <ul class="main-nav">
                 <li><a href="index.html">Home</a></li>
@@ -203,8 +240,6 @@
                 <li><a href="projects.html">Projects</a></li>
                 <li><a href="class-pages.html">Class Pages</a></li>
                 <li><a href="philosophy.html">Teaching Philosophy</a></li>
-                
-                <!-- Dropdown for Policies -->
                 <li class="dropdown">
                     <a href="#" class="dropbtn">Course and Campus Policies</a>
                     <ul class="dropdown-content">
@@ -215,11 +250,9 @@
                 </li>
             </ul>
         </nav>
-    </header>
+    </div>
 
-    <!-- Main Content -->
     <main>
-        <!-- Course Intro Section -->
         <section class="intro-section">
             <h2>Welcome!</h2>
             <p>Hello! I’m Dr. Tiffany Petricini, and I’ll be your instructor for COMM 335N. This course explores the critical role of media in social justice and public humanities, providing you with hands-on experience in digital storytelling and community engagement. Here’s everything you need to get started and succeed!</p>
@@ -227,28 +260,25 @@
             <img src="annie-spratt-QckxruozjRg-unsplash.jpg" alt="Students collaborating on a project at a table" class="decorative-image">
         </section>
 
-        <!-- Course Details Section -->
         <section class="course-details">
             <h2>How This Course Works</h2>
             <p>COMM 335N is a structured yet flexible 16-week course designed to engage you in active learning, creative expression, and community involvement. Here’s a breakdown of what to expect and how to make the most of your experience:</p>
             <ul>
-                <li><strong>Class Structure:</strong> We meet in person on Tuesdays and Thursdays from 1:35 PM to 2:50 PM in Lilley Library/Kochel 060. Each session will offer a mix of discussions, activities, and media exploration to deepen your understanding of public humanities and social justice.</li>
-                <li><strong>Weekly Modules:</strong> Each week’s module on Canvas will include readings, assignments, and prompts to guide your learning. Modules open at the start of each week, so you’ll have time to look ahead and plan your study schedule.</li>
+                <li><strong>Class Structure:</strong> We meet in person on Tuesdays and Thursdays from 1:35 PM to 2:50 PM in Lilley Library/Kochel 060.</li>
+                <li><strong>Weekly Modules:</strong> Each week’s module on Canvas will include readings, assignments, and prompts to guide your learning.</li>
                 <li><strong>Assignments:</strong> You’ll engage with a range of assignments, including:
                     <ul>
                         <li>Weekly Reading Preps that connect course materials to your personal reflections.</li>
-                        <li>Hands-on Projects such as a podcast, documentary, or digital archive that allows you to explore a social justice issue in depth.</li>
-                        <li>Peer Feedback and Group Work to foster collaboration and learning from others.</li>
+                        <li>Hands-on Projects exploring social justice issues.</li>
+                        <li>Peer Feedback and Group Work to foster collaboration.</li>
                     </ul>
                 </li>
-                <li><strong>Grading:</strong> You’ll have control over your learning goals through our grading menu, where you can choose the level of engagement to achieve your desired grade. This approach emphasizes consistency and completion over traditional point-based grading.</li>
-                <li><strong>My Role and Your Role:</strong> My goal is to support your learning journey by providing resources, feedback, and encouragement. I’m here to answer questions and help you succeed. Your role is to actively participate, complete assignments, and communicate openly about any challenges you encounter.</li>
-                <li><strong>Flexibility and Support:</strong> I understand that life can be unpredictable. If you need an extension or extra help, please reach out to me as soon as possible so we can make adjustments to keep you on track.</li>
+                <li><strong>Grading:</strong> Control your learning goals through our grading menu.</li>
+                <li><strong>My Role and Your Role:</strong> My goal is to support your learning journey by providing resources, feedback, and encouragement. Your role is to actively participate, complete assignments, and communicate openly.</li>
+                <li><strong>Flexibility and Support:</strong> If you need an extension or extra help, please reach out to me as soon as possible.</li>
             </ul>
-            <p>By staying engaged with the readings, assignments, and class discussions, you’ll gain a well-rounded understanding of the role media can play in shaping narratives of social justice and public understanding. Let’s work together to make this a transformative and meaningful experience!</p>
         </section>
 
-        <!-- Grading Menu Section -->
         <section class="grading-menu">
             <h2>Grading Menu</h2>
             <table>
@@ -281,10 +311,8 @@
                     </tr>
                 </tbody>
             </table>
-            <img src="glenn-carstens-peters-RLw-UC03Gwc-unsplash.jpg" alt="Checklist" class="decorative-image">
         </section>
 
-        <!-- Expectations Guide Section with Bubbles -->
         <section class="expectations-guide">
             <h2>Expectations Guide</h2>
             <div class="expectations-bubble">
@@ -301,35 +329,12 @@
             </div>
         </section>
 
-        <!-- Collaborative Learning Pact Section -->
-        <section class="pact">
-            <h2>Collaborative Learning Pact</h2>
-            <h3>Instructor’s Commitments:</h3>
-            <ul>
-                <li>I will create a structured, yet flexible, environment where you can take risks and learn from mistakes.</li>
-                <li>I will facilitate meaningful discussions and encourage your engagement.</li>
-                <li>I will respect each student’s voice and work to include all perspectives.</li>
-                <li>I will be available to answer questions and help you succeed.</li>
-                <li>I will incorporate your feedback to improve the course as we go.</li>
-            </ul>
-
-            <h3>Students’ Commitments:</h3>
-            <ul>
-                <li>Engage with the course content, participate in discussions, and complete assignments on time.</li>
-                <li>Respect the ideas, opinions, and identities of classmates, contributing to a positive environment.</li>
-                <li>Seek help when needed and offer help to others when possible.</li>
-                <li>Maintain honesty and integrity in your work.</li>
-                <li>Reflect on feedback and use it to enhance your learning experience.</li>
-            </ul>
-        </section>
-
-        <!-- Contact Section -->
         <section class="contact-info">
             <h2>How to Reach Me</h2>
             <p><strong>Professor:</strong> Dr. Tiffany A. Petricini</p>
             <p><strong>Email:</strong> <a href="mailto:tzr106@psu.edu">tzr106@psu.edu</a></p>
-            <p><strong>Office Hours:</strong> Tuesdays and Thursdays from 10:00 AM - 12:00 PM (no appointment needed) or by appointment on Zoom</p>
-            <p><strong>Instructor Response Time:</strong> I typically respond to emails within 24 hours on weekdays, and I also check messages over the weekend.</p>
+            <p><strong>Office Hours:</strong> Tuesdays and Thursdays from 10:00 AM - 12:00 PM or by appointment on Zoom</p>
+            <p><strong>Instructor Response Time:</strong> I typically respond to emails within 24 hours on weekdays.</p>
         </section>
     </main>
 
@@ -337,5 +342,11 @@
         <p>&copy; 2024 Tiffany Petricini | COMM 335N</p>
     </footer>
 
+    <script>
+        function toggleMenu() {
+            const navContainer = document.querySelector('.nav-container');
+            navContainer.classList.toggle('active');
+        }
+    </script>
 </body>
 </html>
