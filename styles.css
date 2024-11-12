@@ -107,6 +107,29 @@ a:hover {
     nav ul li {
         margin: 10px 0; /* Add spacing between links */
     }
+
+    .course-listing {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.course-listing h3 {
+    color: #4a90e2;
+}
+
+.course-listing a {
+    color: #4a90e2;
+    text-decoration: none;
+}
+
+.course-listing a:hover {
+    text-decoration: underline;
+}
+
     
     header h1 {
         font-size: 1.5em; /* Adjust heading size for smaller screens */
