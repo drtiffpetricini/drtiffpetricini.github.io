@@ -83,11 +83,6 @@
             display: block;
         }
 
-        /* Remove bottom border on last item in dropdown */
-        .dropdown-content li:last-child a {
-            border-bottom: none;
-        }
-
         /* Other Styles */
         .decorative-image {
             width: 100%;
@@ -140,6 +135,35 @@
 
         .contact-info a:hover {
             text-decoration: underline;
+        }
+
+        /* Grading Menu Table */
+        .grading-menu table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1em;
+        }
+
+        .grading-menu th, .grading-menu td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+
+        .grading-menu th {
+            background-color: #4a90e2;
+            color: white;
+        }
+
+        /* Expectations List */
+        .expectations-guide ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .expectations-guide ul li {
+            padding: 8px 0;
+            border-bottom: 1px solid #ddd;
         }
     </style>
 </head>
@@ -196,19 +220,53 @@
             <img src="debby-hudson-asviIGR3CPE-unsplash.jpg" alt="Open notebook with study materials" class="decorative-image">
         </section>
 
-        <!-- Success Tips Section -->
-        <section class="success-tips">
-            <h2>Success Tips</h2>
-            <p>To make the most of this course, consider these tips:</p>
-            <ul>
-                <li>Be proactive: Review each week’s module early and set reminders for due dates.</li>
-                <li>Start on the course homepage: Each week, it’ll guide you to the current module and announcements.</li>
-                <li>Use the study guide: It’ll help you focus on key points and succeed on quizzes.</li>
-                <li>Submit early: Aim to complete assignments at least a day before the due date.</li>
-                <li>Communicate: Reach out to me if you face challenges; I’m here to help!</li>
-                <li>Track assignments in Canvas: The To-Do List and Calendar will help you stay on schedule.</li>
-            </ul>
+        <!-- Grading Menu Section -->
+        <section class="grading-menu">
+            <h2>Grading Menu</h2>
+            <p>Choose your final grade based on your engagement with course assignments:</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Grade</th>
+                        <th>Requirements</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>A</td>
+                        <td>Complete all assignments at “meets expectations” or higher, including the final project.</td>
+                    </tr>
+                    <tr>
+                        <td>B</td>
+                        <td>Complete at least 80% of assignments at “meets expectations” or higher, including the final project.</td>
+                    </tr>
+                    <tr>
+                        <td>C</td>
+                        <td>Complete at least 70% of assignments at “meets expectations” or higher.</td>
+                    </tr>
+                    <tr>
+                        <td>D</td>
+                        <td>Complete 60% of assignments with a basic or higher level.</td>
+                    </tr>
+                    <tr>
+                        <td>F</td>
+                        <td>Less than 60% of assignments completed or below basic level.</td>
+                    </tr>
+                </tbody>
+            </table>
             <img src="glenn-carstens-peters-RLw-UC03Gwc-unsplash.jpg" alt="Checklist" class="decorative-image">
+        </section>
+
+        <!-- Expectations Guide Section -->
+        <section class="expectations-guide">
+            <h2>Expectations Guide</h2>
+            <p>Assignments will be evaluated based on the following standards:</p>
+            <ul>
+                <li><strong>Exceeds Expectations:</strong> Demonstrates a deep understanding and application of course concepts with creative or thorough engagement.</li>
+                <li><strong>Meets Expectations:</strong> Shows good understanding of concepts and fulfills all assignment requirements.</li>
+                <li><strong>Basic:</strong> Covers the assignment requirements but lacks depth or full engagement with the material.</li>
+                <li><strong>Does Not Meet Expectations:</strong> Does not adequately address the assignment requirements or demonstrates minimal understanding.</li>
+            </ul>
         </section>
 
         <!-- Contact Information Section -->
