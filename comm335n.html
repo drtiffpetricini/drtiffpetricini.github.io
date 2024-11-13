@@ -34,7 +34,7 @@
             background-color: #4a90e2;
             display: flex;
             justify-content: center;
-            position: relative; /* Ensures dropdown stays within this container */
+            position: relative;
         }
 
         nav ul.main-nav {
@@ -73,7 +73,7 @@
         .dropdown-content {
             display: none;
             position: absolute;
-            top: 100%; /* Position the dropdown directly below the dropdown button */
+            top: 100%;
             left: 0;
             background-color: #4a90e2;
             min-width: 200px;
@@ -122,6 +122,8 @@
         @media (max-width: 768px) {
             .menu-icon {
                 display: block;
+                width: 100%; /* Center-aligns the menu icon */
+                text-align: center;
             }
 
             nav ul.main-nav {
