@@ -10,16 +10,28 @@
 
     <header>
         <h1>Class Pages</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="publications.html">Publications</a></li>
-                <li><a href="media.html">Media Appearances</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="class-pages.html">Class Pages</a></li>
-                <li><a href="philosophy.html">Teaching Philosophy</a></li>
-            </ul>
-        </nav>
+        <!-- Responsive Navigation Menu -->
+        <div class="nav-container">
+            <span class="menu-icon" onclick="toggleMenu()">☰ Menu</span>
+            <nav>
+                <ul class="main-nav">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="publications.html">Publications</a></li>
+                    <li><a href="media.html">Media Appearances</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="class-pages.html">Class Pages</a></li>
+                    <li><a href="philosophy.html">Teaching Philosophy</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">Course and Campus Policies</a>
+                        <ul class="dropdown-content">
+                            <li><a href="classaiassignment.html">Course AI and Assignment Policies</a></li>
+                            <li><a href="attendance.html">Attendance, Absence and Zoom Policies</a></li>
+                            <li><a href="behrendcampuspolicies.html">Behrend Campus Policies</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <main>
@@ -41,6 +53,13 @@
     <footer>
         <p>&copy; 2024 Tiffany Petricini</p>
     </footer>
+
+    <script>
+        function toggleMenu() {
+            const navContainer = document.querySelector('.nav-container');
+            navContainer.classList.toggle('active');
+        }
+    </script>
 
 </body>
 </html>
