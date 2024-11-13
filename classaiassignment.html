@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Class AI and Assignment Policies</title>
+    <link rel="stylesheet" href="styles.css">
     <style>
         /* General Styles */
         body {
@@ -11,62 +12,56 @@
             font-size: 18px;
             line-height: 1.6;
             color: #333;
-            background-color: #f9f9f9;
+            background-color: #f4f4f9;
             margin: 0;
             padding: 0;
         }
 
-        /* Styling for the header */
+        /* Header Styling */
         header {
             color: white;
-            padding: 2em 1em;
+            padding: 2em;
             text-align: center;
             background-color: #4a90e2;
         }
 
-        header h1, header p {
-            color: white;
+        header h1 {
+            font-size: 2.5em;
+            margin: 0;
             text-shadow: 0px 1px 5px rgba(0, 0, 0, 0.7);
         }
 
-        /* Basic Navigation Menu */
+        /* Navigation Menu */
         .nav-container {
             background-color: #4a90e2;
             text-align: center;
+            padding: 1em;
         }
 
-        nav {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-wrap: wrap;
-        }
-
-        nav ul {
+        .nav-container ul {
             list-style: none;
             padding: 0;
             margin: 0;
             display: flex;
+            justify-content: center;
             flex-wrap: wrap;
         }
 
-        nav ul li {
-            position: relative;
-            margin: 0 10px;
+        .nav-container ul li {
+            margin: 0 15px;
         }
 
-        nav ul li a, nav ul li .dropbtn {
+        .nav-container ul li a {
             color: white;
             text-decoration: none;
-            padding: 10px 15px;
-            display: inline-block;
             font-weight: bold;
             transition: background-color 0.3s;
+            padding: 8px 12px;
+            border-radius: 5px;
         }
 
-        nav ul li a:hover, .dropdown .dropbtn:hover {
+        .nav-container ul li a:hover {
             background-color: #357ab9;
-            border-radius: 5px;
         }
 
         /* Dropdown Menu Styling */
@@ -114,10 +109,6 @@
             padding: 10px;
         }
 
-        .nav-container.active nav {
-            display: block;
-        }
-
         @media (max-width: 768px) {
             .menu-icon {
                 display: block;
@@ -131,99 +122,62 @@
                 width: 100%;
             }
 
-            nav ul li {
-                width: 100%;
-                margin: 0;
-            }
-
-            .nav-container.active nav ul {
+            nav ul.show {
                 display: flex;
             }
 
             .dropdown-content {
                 position: relative;
                 width: 100%;
-                background-color: #4a90e2;
             }
         }
 
-        /* Other Styles */
-        .decorative-image {
-            width: 100%;
-            max-width: 800px;
-            height: auto;
-            margin: 1em 0;
-            display: block;
-        }
-
+        /* Main Content Styling */
         main {
             max-width: 800px;
             margin: 20px auto;
             padding: 20px;
-            background-color: #ffffff;
+            background-color: white;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
+        .section {
+            margin: 20px 0;
+            padding: 15px;
+            background-color: #f1f7fc;
+            border-left: 4px solid #4a90e2;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .section h2 {
+            color: #4a90e2;
+            font-size: 1.8em;
+            margin-top: 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .section h2::before {
+            content: '📘';
+            font-size: 1.2em;
+            margin-right: 8px;
+            color: #4a90e2;
+        }
+
+        ul, ol {
+            margin: 10px 0;
+            padding-left: 1.5em;
+        }
+
+        /* Footer Styling */
         footer {
             text-align: center;
-            margin-top: 20px;
             padding: 10px;
             font-size: 0.9em;
             color: #666;
-        }
-
-        .grading-menu table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 1em;
-        }
-
-        .grading-menu th, .grading-menu td {
-            padding: 10px;
-            border: 1px solid #ddd;
-            text-align: left;
-        }
-
-        .grading-menu th {
-            background-color: #4a90e2;
-            color: white;
-        }
-
-        .expectations-bubble {
-            background-color: #e0f3ff;
-            border: 1px solid #b6e0ff;
-            border-radius: 20px;
-            padding: 15px;
-            margin: 10px 0;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        .expectations-bubble strong {
-            color: #4a90e2;
-            font-size: 1.1em;
-        }
-
-        .contact-info {
-            margin-top: 2em;
-            padding: 1em;
-            background-color: #f1f1f1;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        .contact-info h2 {
-            color: #4a90e2;
-            margin-bottom: 0.5em;
-        }
-
-        .contact-info a {
-            color: #4a90e2;
-            text-decoration: none;
-        }
-
-        .contact-info a:hover {
-            text-decoration: underline;
+            margin-top: 20px;
         }
 
     </style>
@@ -234,7 +188,7 @@
         <h1>Class AI and Assignment Policies</h1>
     </header>
 
-    <!-- Responsive Navigation Menu -->
+    <!-- Navigation Menu -->
     <div class="nav-container">
         <span class="menu-icon" onclick="toggleMenu()">☰ Menu</span>
         <nav>
@@ -248,8 +202,8 @@
                 <li class="dropdown">
                     <a href="#" class="dropbtn">Course and Campus Policies</a>
                     <ul class="dropdown-content">
-                        <li><a href="classaiassignment.html">Course AI and Assignment Policies</a></li>
-                        <li><a href="attendance.html">Attendance, Absence and Zoom Policies</a></li>
+                        <li><a href="classaiassignment.html">Class AI & Assignment Policies</a></li>
+                        <li><a href="attendance.html">Attendance, Absence, and Zoom Policies</a></li>
                         <li><a href="behrendcampuspolicies.html">Behrend Campus Policies</a></li>
                     </ul>
                 </li>
@@ -260,69 +214,65 @@
     <main>
         <section class="section">
             <h2>Can I use generative AI like ChatGPT or Dall-E for any of Dr. P's courses?</h2>
-            <p>The answer to this question isn’t without many caveats. The short answer is:</p>
-            <p>You may only use generative AIs in ways that we discuss in class or if you have explicit permission which you've sought prior to creating your deliverable (e.g., a video or essay) or finishing your assessment (e.g., an exam).</p>
+            <p>You may only use generative AIs in ways we discuss in class or if you have explicit permission sought before creating a deliverable or completing an assessment.</p>
         </section>
 
         <section class="section">
-            <h2>Can I use generative AI like ChatGPT and Dall-E in all my courses?</h2>
-            <p>No. Different faculty have different policies, and these policies might even differ from course to course. The best way to determine if you are allowed to use these tools in your course is to be transparent and ask your instructor directly.</p>
+            <h2>Can I use generative AI in all my courses?</h2>
+            <p>No. Different faculty have different policies, and they may vary by course. Always confirm with your instructor for each course.</p>
         </section>
 
         <section class="section">
-            <h2>What exactly is plagiarism anyway? Do I still have to find a source if I just "know" something?</h2>
-            <p>This is a great question that will become clearer as you grow at the university! For now, I encourage you all to earn your Academic Integrity Certificate. It doesn’t take long and can help answer a lot of your questions.</p>
+            <h2>What exactly is plagiarism anyway?</h2>
+            <p>Plagiarism involves using others' work without proper acknowledgment. I recommend earning your Academic Integrity Certificate to better understand it.</p>
         </section>
 
         <section class="section">
             <h2>Dr. P.'s Three Rules about Using AI</h2>
             <ol>
-                <li><strong>Be truthful about your use of GAI tools.</strong> Transparency is essential. I will let you know when I use AI in our class, and I expect you to do the same when you use AI for your assignments.</li>
-                <li><strong>Use it to help you, not to replace you.</strong> AI should support your work, not complete it for you. Use temperance and prudence in making ethical choices.</li>
-                <li><strong>Have the courage to take chances.</strong> This is a new world, with many possibilities. If you have a creative idea, go for it—while following the first two guidelines.</li>
+                <li><strong>Be truthful</strong> about your use of AI tools.</li>
+                <li><strong>Use it to support, not replace</strong> your work.</li>
+                <li><strong>Take chances</strong> creatively and ethically.</li>
             </ol>
         </section>
 
         <section class="section">
             <h2>Artificial Intelligence Guidelines</h2>
-            <p>Generative AI tools can be helpful but require caution. These technologies create content (text, images, video) and are unable to discern complex intentions or nuances.</p>
+            <p>Generative AI tools have limitations. Consider:</p>
             <ul>
-                <li>Tasks often require critical reasoning and audience awareness that AI cannot provide.</li>
-                <li>AI may produce false “data results” or unsupportable assertions, which are unacceptable for assignments.</li>
-                <li>AI paraphrasing often results in mosaic plagiarism and should be avoided.</li>
-            </ul>
-            <p>If you use any AI tools, be mindful of the following:</p>
-            <ul>
-                <li><strong>Penn State’s G9 Academic Integrity policy</strong> prohibits false information, invented sources, and misrepresented work.</li>
-                <li><strong>Properly document and cite any AI use</strong> to comply with university policies on academic honesty.</li>
+                <li>AI lacks critical reasoning and audience awareness.</li>
+                <li>AI may produce false data or unsupported assertions.</li>
+                <li>AI-generated paraphrasing can result in mosaic plagiarism.</li>
             </ul>
         </section>
 
         <section class="section">
             <h2>Academic Integrity Information</h2>
-            <p>Academic integrity is the pursuit of scholarly activity in an open, honest, and responsible manner. At Penn State, all students are expected to uphold these principles.</p>
-            <p>Violating academic integrity, as outlined by <strong>Penn State policy G-9</strong>, can have severe consequences, including failing the assignment or course and potential academic penalties.</p>
+            <p>Academic integrity means conducting scholarship openly and responsibly. Violations of Penn State’s G9 policy carry serious consequences.</p>
         </section>
 
         <section class="section">
             <h2>Writing Expectations</h2>
-            <p>As Penn State students, you are expected to meet a high standard in all written and oral assignments. Each of your assignments will be reviewed with these standards in mind, and I am here to support you through every step of the assignment process. Utilize university resources and contact me if you need additional help.</p>
+            <p>All assignments should meet high standards of quality. Utilize university resources and seek help if needed.</p>
         </section>
 
         <section class="section">
             <h2>Due Dates</h2>
-            <p>Assignment due dates will be posted in Canvas as each weekly module is prepared. Assignments are due at the beginning of class, unless otherwise specified. If you have difficulty finding the course calendar, message me directly.</p>
+            <p>Assignment due dates will be posted in Canvas. Assignments are due at the beginning of class unless specified otherwise.</p>
         </section>
 
         <section class="section">
             <h2>Exam Policy</h2>
-            <p>Exams and quizzes will be administered on the scheduled dates and times. Any missed exam requires a university-approved excuse, and makeup arrangements must be made accordingly.</p>
+            <p>Exams and quizzes will occur as scheduled. Missed exams require a university-approved excuse and arranged make-up.</p>
         </section>
     </main>
 
     <footer>
         <p>&copy; 2024 Tiffany Petricini | COMM 335N</p>
     </footer>
+
+   
+
 
     <script>
         function toggleMenu() {
