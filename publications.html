@@ -5,70 +5,130 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Publications and Presentations - Tiffany Petricini</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Interactive Section Styling */
+        .section-title {
+            font-size: 1.5em;
+            color: #4a90e2;
+            margin: 20px 0 10px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background-color: #e0f3ff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .section-content {
+            display: none;
+            padding: 15px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .section-content ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .section-content ul li {
+            margin-bottom: 10px;
+            padding: 5px 10px;
+            border-left: 3px solid #4a90e2;
+        }
+
+        /* Toggle Icon */
+        .toggle-icon {
+            font-size: 1.2em;
+            color: #4a90e2;
+        }
+    </style>
 </head>
 <body>
 
     <header>
         <h1>Publications and Presentations</h1>
+    </header>
+
+    <!-- Navigation Menu -->
+    <div class="nav-container">
+        <span class="menu-icon" onclick="toggleMenu()">☰ Menu</span>
         <nav>
-            <ul>
+            <ul class="main-nav">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="publications.html">Publications</a></li>
                 <li><a href="media.html">Media Appearances</a></li>
                 <li><a href="projects.html">Projects</a></li>
                 <li><a href="class-pages.html">Class Pages</a></li>
                 <li><a href="philosophy.html">Teaching Philosophy</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">Course and Campus Policies</a>
+                    <ul class="dropdown-content">
+                        <li><a href="classaiassignment.html">Class AI & Assignment Policies</a></li>
+                        <li><a href="attendance.html">Attendance, Absence, and Zoom Policies</a></li>
+                        <li><a href="behrendcampuspolicies.html">Behrend Campus Policies</a></li>
+                    </ul>
+                </li>
             </ul>
         </nav>
-    </header>
+    </div>
 
     <main>
-        <section class="publications">
-            <h2>Publications</h2>
-
-            <!-- Sample Publication Card -->
-            <div class="publication-card">
-                <img src="cover-ai-media-ecology.jpg" alt="Cover of AI and Media Ecology" class="publication-cover">
-                <div class="publication-details">
-                    <h3>Special issue introduction: AI and media ecology</h3>
-                    <p><strong>Author:</strong> Tiffany Petricini (2024)</p>
-                    <p><strong>Journal:</strong> Explorations in Media Ecology, 23(1), 93-103.</p>
-                </div>
+        <!-- Publications Section -->
+        <div class="section">
+            <div class="section-title" onclick="toggleSection(this)">
+                Publications <span class="toggle-icon">+</span>
             </div>
-
-            <!-- Additional Publication Cards -->
-            <div class="publication-card">
-                <img src="cover-eye-master.jpg" alt="Cover of The Eye of the Master" class="publication-cover">
-                <div class="publication-details">
-                    <h3>Review of Matteo Pasquinelli (2023). The Eye of the Master: A Social History of Artificial Intelligence</h3>
-                    <p><strong>Author:</strong> Tiffany Petricini (2024)</p>
-                    <p><strong>Journal:</strong> Postdigital Science and Education</p>
-                    <a href="https://doi.org/10.1007/s42438-024-00513-0" target="_blank">Read Publication</a>
-                </div>
+            <div class="section-content">
+                <ul>
+                    <li><strong>2023:</strong> "Title of Publication 1" - <em>Journal Name</em></li>
+                    <li><strong>2022:</strong> "Title of Publication 2" - <em>Journal Name</em></li>
+                    <li><strong>2021:</strong> "Title of Publication 3" - <em>Journal Name</em></li>
+                    <!-- Add more publications as needed -->
+                </ul>
             </div>
+        </div>
 
-            <!-- Add additional cards for each publication as shown above -->
-        </section>
-
-        <section class="presentations">
-            <h2>Conference Presentations</h2>
-
-            <!-- Sample Presentation Card -->
-            <div class="publication-card">
-                <div class="publication-details">
-                    <h3>The Rhetoric of Artificial Intelligence</h3>
-                    <p><strong>Author:</strong> Tiffany Petricini (2024)</p>
-                    <p><strong>Event:</strong> Penn State Behrend 2024 Faculty Showcase</p>
-                </div>
+        <!-- Presentations Section -->
+        <div class="section">
+            <div class="section-title" onclick="toggleSection(this)">
+                Presentations <span class="toggle-icon">+</span>
             </div>
-
-            <!-- Add additional cards for each presentation as shown above -->
-        </section>
+            <div class="section-content">
+                <ul>
+                    <li><strong>2023:</strong> "Title of Presentation 1" - Conference Name</li>
+                    <li><strong>2022:</strong> "Title of Presentation 2" - Conference Name</li>
+                    <li><strong>2021:</strong> "Title of Presentation 3" - Conference Name</li>
+                    <!-- Add more presentations as needed -->
+                </ul>
+            </div>
+        </div>
     </main>
 
     <footer>
         <p>&copy; 2024 Tiffany Petricini</p>
     </footer>
 
+    <script>
+        function toggleMenu() {
+            const navContainer = document.querySelector('.nav-container');
+            navContainer.classList.toggle('active');
+        }
+
+        function toggleSection(element) {
+            const content = element.nextElementSibling;
+            const icon = element.querySelector('.toggle-icon');
+            if (content.style.display === 'none' || content.style.display === '') {
+                content.style.display = 'block';
+                icon.textContent = '-';
+            } else {
+                content.style.display = 'none';
+                icon.textContent = '+';
+            }
+        }
+    </script>
 </body>
 </html>
