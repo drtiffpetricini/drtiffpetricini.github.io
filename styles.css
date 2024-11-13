@@ -46,7 +46,7 @@ header p {
 nav ul {
     display: flex;
     justify-content: center;
-    list-style: none;
+    list-style: none; /* Removes bullets from main nav */
     padding: 10px 0;
 }
 
@@ -62,6 +62,42 @@ nav ul li a {
 
 nav ul li a:hover {
     text-decoration: underline;
+}
+
+/* Dropdown Menu Styling */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #4a90e2;
+    min-width: 200px;
+    padding: 0;
+    border-radius: 5px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content li {
+    list-style: none; /* Removes bullets from dropdown items */
+    margin: 0;
+}
+
+.dropdown-content li a {
+    color: white;
+    padding: 10px;
+    display: block;
+    text-decoration: none;
+    border-bottom: 1px solid #357ab9;
+    transition: background-color 0.3s;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content li a:hover {
+    background-color: #357ab9;
 }
 
 /* Main Content Styling */
@@ -95,13 +131,6 @@ a {
 
 a:hover {
     text-decoration: underline;
-}
-
-/* Banner Image Styling */
-.banner-image {
-    width: 100%;
-    max-height: 300px;
-    object-fit: cover;
 }
 
 /* Responsive Layout for Smaller Screens */
@@ -141,4 +170,44 @@ a:hover {
 
 .course-listing a:hover {
     text-decoration: underline;
+}
+
+/* Banner Image Styling */
+.banner-image {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+}
+
+/* Mobile Navigation Menu */
+.menu-toggle {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+        text-align: center;
+        padding: 10px;
+        background-color: #4a90e2;
+        color: white;
+        font-size: 1.5em;
+        cursor: pointer;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+
+    .dropdown-content {
+        position: relative;
+        width: 100%;
+        background-color: #4a90e2;
+    }
 }
