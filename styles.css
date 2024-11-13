@@ -76,10 +76,10 @@ nav ul li a:hover {
     border-radius: 5px;
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
     z-index: 1;
+    list-style-type: none; /* Removes bullets from dropdown items */
 }
 
 .dropdown-content li {
-    list-style: none; /* Removes bullets from dropdown items */
     margin: 0;
 }
 
@@ -92,12 +92,13 @@ nav ul li a:hover {
     transition: background-color 0.3s;
 }
 
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
 .dropdown-content li a:hover {
     background-color: #357ab9;
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
 }
 
 /* Main Content Styling */
