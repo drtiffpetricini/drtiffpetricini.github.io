@@ -1,98 +1,39 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tiffany Petricini - Associate Teaching Professor</title>
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        /* Ensure Menu icon only displays on mobile */
-        .menu-icon {
-            display: none; /* Hide by default */
-        }
-        
-        /* Show Menu icon only on mobile screens */
-        @media (max-width: 768px) {
-            .menu-icon {
-                display: block;
-                text-align: center;
-                padding: 10px;
-                background-color: #4a90e2;
-                color: white;
-                font-size: 1.5em;
-                cursor: pointer;
-            }
-            
-            .main-nav {
-                display: none; /* Hide main nav by default on mobile */
-                flex-direction: column;
-                text-align: center;
-            }
-            
-            .nav-container.active .main-nav {
-                display: flex; /* Show menu when active on mobile */
-            }
-            
-            .dropdown-content {
-                position: relative;
-                width: 100%;
-                background-color: #4a90e2;
-            }
-        }
-    </style>
-</head>
-<body>
+/* Dropdown Menu Styling */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #4a90e2;
+    min-width: 200px;
+    padding: 0;
+    border-radius: 5px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
 
-    <header>
-        <div class="header-content">
-            <img src="symposium-156.jpg" alt="Headshot of Tiffany Petricini" class="headshot">
-            <h1>Tiffany Petricini</h1>
-            <p>Associate Teaching Professor of Communication at Penn State Erie</p>
-            <p>Specialties: Media Ecology, Phenomenology, Interpersonal Communication</p>
-        </div>
-        
-        <!-- Updated Navigation Menu with Dropdown -->
-        <div class="nav-container">
-            <span class="menu-icon" onclick="toggleMenu()">☰ Menu</span>
-            <nav>
-                <ul class="main-nav">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="publications.html">Publications</a></li>
-                    <li><a href="media.html">Media Appearances</a></li>
-                    <li><a href="projects.html">Projects</a></li>
-                    <li><a href="class-pages.html">Class Pages</a></li>
-                    <li><a href="philosophy.html">Teaching Philosophy</a></li>
-                    <li class="dropdown">
-                        <a href="#" class="dropbtn">Course and Campus Policies</a>
-                        <ul class="dropdown-content">
-                            <li><a href="classaiassignment.html">Course AI and Assignment Policies</a></li>
-                            <li><a href="attendance.html">Attendance, Absence and Zoom Policies</a></li>
-                            <li><a href="behrendcampuspolicies.html">Behrend Campus Policies</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+.dropdown {
+    position: relative; /* Ensures the dropdown-content positions relative to this item */
+}
 
-    <main>
-        <section>
-            <h2>Welcome</h2>
-            <p>Welcome to my professional website! Currently, I am an Associate Teaching Professor of Communication studies at Penn State Erie, The Behrend Campus in Erie, Pennsylvania. My personal passion is learning, and I try to encourage a joy of learning in all of my interactions with others. While teaching is my primary focus, I am active in the scholarly community and have published several articles and my book, "Friendship and Technology" with Routledge. I have been an invited speaker at several events and internationally recognized. I am also the social media expert for NBC-affiliate WFMJ 21 News. Here, you can explore my work as a scholar and educator in Communication Studies. Please feel free to browse my publications, media appearances, and projects, or learn more about my teaching philosophy and class resources.</p>
-        </section>
-    </main>
+.dropdown-content li {
+    list-style: none;
+    padding: 0;
+}
 
-    <footer>
-        <p>&copy; 2024 Tiffany Petricini</p>
-    </footer>
+.dropdown-content li a {
+    color: white;
+    padding: 10px;
+    display: block;
+    text-decoration: none;
+    border-bottom: 1px solid #357ab9;
+    transition: background-color 0.3s;
+}
 
-    <!-- Script for Mobile Menu Toggle -->
-    <script>
-        function toggleMenu() {
-            const navContainer = document.querySelector('.nav-container');
-            navContainer.classList.toggle('active');
-        }
-    </script>
+.dropdown:hover .dropdown-content {
+    display: block;
+}
 
-</body>
-</html>
+.dropdown-content li a:hover {
+    background-color: #357ab9;
+}
