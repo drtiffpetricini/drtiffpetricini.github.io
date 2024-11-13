@@ -1,89 +1,10 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Class AI and Assignment Policy</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #f9f9f9;
-            margin: 0;
-            padding: 0;
-        }
-
-        /* Header Styling */
-        header {
-            background-color: #4a90e2;
-            color: white;
-            padding: 1em;
-            text-align: center;
-        }
-
-        header h1 {
-            margin: 0;
-            font-size: 2em;
-        }
-
-        /* Navigation Menu */
-        .nav-container {
-            background-color: #4a90e2;
-            overflow: hidden;
-        }
-
-        nav ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-        }
-
-        nav ul li {
-            margin: 0 10px;
-        }
-
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            padding: 10px 15px;
-            display: inline-block;
-        }
-
-        /* Content Styling */
-        main {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        h2 {
-            color: #4a90e2;
-        }
-
-        .section {
-            margin-top: 1em;
-            padding: 10px;
-            background-color: #f1f1f1;
-            border-left: 4px solid #4a90e2;
-            border-radius: 5px;
-        }
-
-        /* Footer Styling */
-        footer {
-            text-align: center;
-            padding: 10px;
-            font-size: 0.9em;
-            color: #666;
-            margin-top: 20px;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
@@ -91,16 +12,25 @@
         <h1>Class AI and Assignment Policy</h1>
     </header>
 
+    <!-- Responsive Navigation Menu -->
     <div class="nav-container">
+        <span class="menu-icon" onclick="toggleMenu()">☰ Menu</span>
         <nav>
-            <ul>
+            <ul class="main-nav">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="publications.html">Publications</a></li>
                 <li><a href="media.html">Media Appearances</a></li>
                 <li><a href="projects.html">Projects</a></li>
                 <li><a href="class-pages.html">Class Pages</a></li>
                 <li><a href="philosophy.html">Teaching Philosophy</a></li>
-                <li><a href="classaiassignment.html">Class AI & Assignment Policy</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">Course and Campus Policies</a>
+                    <ul class="dropdown-content">
+                        <li><a href="classaiassignment.html">Class AI & Assignment Policy</a></li>
+                        <li><a href="attendance.html">Attendance, Absence and Zoom Policies</a></li>
+                        <li><a href="behrendcampuspolicies.html">Behrend Campus Policies</a></li>
+                    </ul>
+                </li>
             </ul>
         </nav>
     </div>
