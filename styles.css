@@ -252,3 +252,47 @@ a:hover {
     background-color: #357ab9;
 }
 
+        .grading-menu table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1em;
+        }
+        .grading-menu th, .grading-menu td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+        .grading-menu th {
+            background-color: #4a90e2;
+            color: white;
+        }
+        .expectations-bubble {
+            background-color: #e0f3ff;
+            border: 1px solid #b6e0ff;
+            border-radius: 20px;
+            padding: 15px;
+            margin: 10px 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .expectations-bubble strong {
+            color: #4a90e2;
+            font-size: 1.1em;
+        }
+        .contact-info {
+            margin-top: 2em;
+            padding: 1em;
+            background-color: #f1f1f1;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .contact-info h2 {
+            color: #4a90e2;
+            margin-bottom: 0.5em;
+        }
+        .contact-info a {
+            color: #4a90e2;
+            text-decoration: none;
+        }
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
