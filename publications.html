@@ -6,44 +6,46 @@
     <title>Publications and Presentations - Tiffany Petricini</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-        /* Interactive Section Styling */
-        .section-title {
-            font-size: 1.5em;
-            color: #4a90e2;
-            margin: 20px 0 10px;
+        /* Styles for collapsible sections */
+        .collapsible {
+            background-color: #4a90e2;
+            color: white;
             cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
             padding: 10px;
-            background-color: #e0f3ff;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 18px;
+            margin-top: 5px;
         }
 
-        .section-content {
+        .collapsible:hover {
+            background-color: #357ab9;
+        }
+
+        .content {
+            padding: 0 18px;
             display: none;
-            padding: 15px;
-            background-color: #ffffff;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 5px;
         }
 
-        .section-content ul {
-            list-style: none;
-            padding-left: 0;
+        .publication {
+            margin: 10px 0;
         }
 
-        .section-content ul li {
-            margin-bottom: 10px;
-            padding: 5px 10px;
-            border-left: 3px solid #4a90e2;
-        }
-
-        /* Toggle Icon */
-        .toggle-icon {
+        .publication h3 {
             font-size: 1.2em;
             color: #4a90e2;
+            margin: 5px 0;
+        }
+
+        .publication p {
+            margin: 5px 0;
+            line-height: 1.5;
         }
     </style>
 </head>
@@ -67,8 +69,8 @@
                 <li class="dropdown">
                     <a href="#" class="dropbtn">Course and Campus Policies</a>
                     <ul class="dropdown-content">
-                        <li><a href="classaiassignment.html">Class AI & Assignment Policies</a></li>
-                        <li><a href="attendance.html">Attendance, Absence, and Zoom Policies</a></li>
+                        <li><a href="classaiassignment.html">Class AI & Assignment Policy</a></li>
+                        <li><a href="attendance.html">Attendance, Absence and Zoom Policies</a></li>
                         <li><a href="behrendcampuspolicies.html">Behrend Campus Policies</a></li>
                     </ul>
                 </li>
@@ -77,35 +79,43 @@
     </div>
 
     <main>
-        <!-- Publications Section -->
-        <div class="section">
-            <div class="section-title" onclick="toggleSection(this)">
-                Publications <span class="toggle-icon">+</span>
-            </div>
-            <div class="section-content">
-                <ul>
-                    <li><strong>2023:</strong> "Title of Publication 1" - <em>Journal Name</em></li>
-                    <li><strong>2022:</strong> "Title of Publication 2" - <em>Journal Name</em></li>
-                    <li><strong>2021:</strong> "Title of Publication 3" - <em>Journal Name</em></li>
-                    <!-- Add more publications as needed -->
-                </ul>
+        <!-- Collapsible Sections -->
+        <button class="collapsible">Books</button>
+        <div class="content">
+            <div class="publication">
+                <p>Petricini, T. (2022). <em>Friendship and Technology: A Philosophical Approach to Computer Mediated Communication</em>. Routledge.</p>
             </div>
         </div>
 
-        <!-- Presentations Section -->
-        <div class="section">
-            <div class="section-title" onclick="toggleSection(this)">
-                Presentations <span class="toggle-icon">+</span>
-            </div>
-            <div class="section-content">
-                <ul>
-                    <li><strong>2023:</strong> "Title of Presentation 1" - Conference Name</li>
-                    <li><strong>2022:</strong> "Title of Presentation 2" - Conference Name</li>
-                    <li><strong>2021:</strong> "Title of Presentation 3" - Conference Name</li>
-                    <!-- Add more presentations as needed -->
-                </ul>
+        <button class="collapsible">Refereed Scholarly Journals</button>
+        <div class="content">
+            <div class="publication">
+                <p>Petricini, T. (2024). Special issue introduction: AI and media ecology. <em>Explorations in Media Ecology</em>, 23(1), 93-103.</p>
+                <p>Petricini, T. (2024). What would Aristotle do? Navigating generative artificial intelligence in higher education. <em>Postdigital Science and Education</em>, 1-7.</p>
+                <p>Petricini, T. (2024). ChatGPT: Everything to everyone all at once. <em>ETC: A Review of General Semantics</em>, 80(3), 340-350.</p>
+                <p>Petricini, T. (2019). Explorations in the noosphere: Hermeneutic presence and hostility in cyberspace. <em>Explorations in Media Ecology</em>, 18(1-2), 57-71.</p>
+                <p>Petricini, T. (2017). Synchronic responsibility: A commentary on Walter J. Ong’s work on time consciousness. <em>Explorations in Media Ecology</em>, 16(2-3), 195-203.</p>
             </div>
         </div>
+
+        <!-- Add more sections as needed -->
+        <button class="collapsible">Reports</button>
+        <div class="content">
+            <div class="publication">
+                <p>Ramsay, C., & Petricini, T. et al. (2024). Final Report of the Joint Standing Committee on Effective and Responsible Use of Artificial Intelligence in Higher Education Instruction. Penn State Joint Standing Committee on Effective Use of Artificial Intelligence in Higher Education Instruction, Penn State.</p>
+            </div>
+        </div>
+
+        <button class="collapsible">Book Reviews</button>
+        <div class="content">
+            <div class="publication">
+                <p>Petricini, T. (2024). Review of Matteo Pasquinelli (2023). <em>The Eye of the Master: A Social History of Artificial Intelligence</em>. <em>Postdigital Science and Education</em>. <a href="https://doi.org/10.1007/s42438-024-00513-0">https://doi.org/10.1007/s42438-024-00513-0</a></p>
+                <!-- Add more reviews in a similar format -->
+            </div>
+        </div>
+
+        <!-- Other categories like Book Chapters, Convention Papers/Panel Participation, etc. -->
+
     </main>
 
     <footer>
@@ -113,22 +123,22 @@
     </footer>
 
     <script>
-        function toggleMenu() {
-            const navContainer = document.querySelector('.nav-container');
-            navContainer.classList.toggle('active');
-        }
-
-        function toggleSection(element) {
-            const content = element.nextElementSibling;
-            const icon = element.querySelector('.toggle-icon');
-            if (content.style.display === 'none' || content.style.display === '') {
-                content.style.display = 'block';
-                icon.textContent = '-';
-            } else {
-                content.style.display = 'none';
-                icon.textContent = '+';
+        // JavaScript for collapsible sections
+        document.addEventListener("DOMContentLoaded", function () {
+            const coll = document.getElementsByClassName("collapsible");
+            for (let i = 0; i < coll.length; i++) {
+                coll[i].addEventListener("click", function () {
+                    this.classList.toggle("active");
+                    const content = this.nextElementSibling;
+                    if (content.style.display === "block") {
+                        content.style.display = "none";
+                    } else {
+                        content.style.display = "block";
+                    }
+                });
             }
-        }
+        });
     </script>
+
 </body>
 </html>
