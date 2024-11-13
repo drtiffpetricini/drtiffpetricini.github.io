@@ -16,7 +16,7 @@
             padding: 0;
         }
 
-        /* Header Styling */
+        /* Styling for the header */
         header {
             color: white;
             padding: 2em 1em;
@@ -29,43 +29,41 @@
             text-shadow: 0px 1px 5px rgba(0, 0, 0, 0.7);
         }
 
-        /* Navigation Menu */
+        /* Basic Navigation Menu */
         .nav-container {
             background-color: #4a90e2;
-            text-align: center;
         }
 
-        .menu-icon {
-            display: none;
-            font-size: 24px;
-            color: white;
-            cursor: pointer;
-            padding: 10px;
-            text-align: center;
-        }
-
-        nav ul.main-nav {
-            list-style: none;
-            padding: 0;
+        nav {
             display: flex;
             justify-content: center;
-            margin: 0;
+            align-items: center;
+            flex-wrap: wrap;
         }
 
-        nav ul.main-nav li {
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        nav ul li {
             position: relative;
             margin: 0 10px;
         }
 
-        nav ul.main-nav li a, .dropdown-toggle {
+        nav ul li a, nav ul li .dropbtn {
             color: white;
             text-decoration: none;
             padding: 10px 15px;
             display: inline-block;
             font-weight: bold;
+            transition: background-color 0.3s;
         }
 
-        nav ul.main-nav li a:hover, .dropdown .dropbtn:hover {
+        nav ul li a:hover, .dropdown .dropbtn:hover {
             background-color: #357ab9;
             border-radius: 5px;
         }
@@ -78,10 +76,14 @@
             left: 0;
             background-color: #4a90e2;
             min-width: 200px;
+            padding: 0;
             border-radius: 5px;
             box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
             z-index: 1;
-            list-style-type: none;
+        }
+
+        .dropdown-content li {
+            margin: 0;
         }
 
         .dropdown-content li a {
@@ -89,6 +91,8 @@
             padding: 10px;
             display: block;
             text-decoration: none;
+            border-bottom: 1px solid #357ab9;
+            transition: background-color 0.3s;
         }
 
         .dropdown-content li a:hover {
@@ -101,29 +105,38 @@
         }
 
         /* Responsive Navigation */
+        .menu-icon {
+            display: none;
+            font-size: 24px;
+            color: white;
+            cursor: pointer;
+            padding: 10px;
+        }
+
+        .nav-container.active nav {
+            display: block;
+        }
+
         @media (max-width: 768px) {
             .menu-icon {
                 display: block;
-                background-color: #4a90e2;
-            }
-
-            nav ul.main-nav {
-                flex-direction: column;
-                display: none;
-            }
-
-            nav ul.main-nav.show {
-                display: flex;
-            }
-
-            nav ul.main-nav li {
-                width: 100%;
                 text-align: center;
             }
 
-            .dropdown-content {
-                position: relative;
+            nav ul {
+                display: none;
+                flex-direction: column;
+                text-align: center;
                 width: 100%;
+            }
+
+            nav ul li {
+                width: 100%;
+                margin: 0;
+            }
+
+            .nav-container.active nav ul {
+                display: flex;
             }
         }
 
@@ -278,23 +291,23 @@
                 <tbody>
                     <tr>
                         <td>A (100%)</td>
-                        <td>Complete all 8 assignments at “meets expectations” or higher, including all weekly reading preps and the final project.</td>
+                        <td>Complete all 8 assignments at “meets expectations” or higher, including at least 12 of 12 weekly reading preps and the final project.</td>
                     </tr>
                     <tr>
                         <td>B (80-89%)</td>
-                        <td>Complete at least 7 of the 8 assignments at “meets expectations” or higher, including the final project.</td>
+                        <td>Complete at least 7 of the 8 assignments at “meets expectations” or higher, including at least 10 of 12 weekly reading preps and the final project.</td>
                     </tr>
                     <tr>
                         <td>C (70-79%)</td>
-                        <td>Complete at least 6 of the 8 assignments at “meets expectations” or higher.</td>
+                        <td>Complete at least 6 of the 8 assignments at “meets expectations” or higher, including at least 8 of 12 weekly reading preps.</td>
                     </tr>
                     <tr>
                         <td>D (60-69%)</td>
-                        <td>Complete 5 of the 8 assignments at a basic or higher level.</td>
+                        <td>Complete 5 of the 8 assignments at a basic or higher level, including at least 7 of 12 weekly reading preps.</td>
                     </tr>
                     <tr>
                         <td>F (below 60%)</td>
-                        <td>Complete fewer than 5 assignments or fall below the basic level on completed assignments.</td>
+                        <td>Complete fewer than 5 assignments or fewer than 7 of 12 weekly reading preps, or fall below the basic level on completed assignments.</td>
                     </tr>
                 </tbody>
             </table>
@@ -316,16 +329,14 @@
             </div>
         </section>
 
-        <!-- Collaborative Learning Pact Section -->
-        <section class="collaborative-pact">
+        <section class="collaborative-learning-pact">
             <h2>Collaborative Learning Pact</h2>
-            <p>Our learning environment is built on trust, mutual respect, and collaboration. This pact guides our interactions and commitments to each other:</p>
+            <p>This course is built on mutual respect and collaboration. Together, we commit to the following:</p>
             <ul>
-                <li><strong>Transparency:</strong> We commit to sharing our progress, challenges, and successes openly.</li>
-                <li><strong>Accountability:</strong> We hold ourselves and each other accountable for contributing to our learning community.</li>
-                <li><strong>Respect:</strong> We respect differing opinions, backgrounds, and experiences, creating a space where everyone feels valued.</li>
-                <li><strong>Collaboration:</strong> We actively engage and support one another in all collaborative efforts, recognizing the strength of diverse perspectives.</li>
-                <li><strong>Growth Mindset:</strong> We approach each task with a willingness to learn and grow, knowing mistakes are part of the journey.</li>
+                <li><strong>Open Communication:</strong> We will be transparent in sharing ideas and feedback, always with respect.</li>
+                <li><strong>Respect for Diversity:</strong> We acknowledge and embrace each other’s unique perspectives, backgrounds, and skills.</li>
+                <li><strong>Active Participation:</strong> Each of us will contribute to discussions, group work, and activities to enrich our collective learning.</li>
+                <li><strong>Supportive Environment:</strong> We will support one another, understanding that everyone learns at their own pace.</li>
             </ul>
         </section>
 
