@@ -49,6 +49,9 @@ nav ul {
     list-style: none; /* Removes bullets from main nav */
     padding: 10px 0;
 }
+.main-nav.active {
+    display: block; /* Ensures menu shows when active */
+}
 
 nav ul li {
     margin: 0 15px;
