@@ -92,11 +92,6 @@ nav ul li a:hover {
     transition: background-color 0.3s;
 }
 
-.dropdown-content li a:hover {
-    background-color: #357ab9;
-}
-
-/* Show dropdown on hover */
 .dropdown:hover .dropdown-content {
     display: block;
 }
@@ -135,18 +130,36 @@ a:hover {
 }
 
 /* Responsive Layout for Smaller Screens */
-@media (max-width: 600px) {
+.menu-toggle {
+    display: none;
+    text-align: center;
+    padding: 10px;
+    background-color: #4a90e2;
+    color: white;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
     nav ul {
-        flex-direction: column; /* Stack the links vertically on small screens */
-        padding: 0;
+        display: none;
+        flex-direction: column;
+        text-align: center;
     }
 
-    nav ul li {
-        margin: 10px 0; /* Add spacing between links */
+    nav ul.show {
+        display: flex;
     }
 
-    header h1 {
-        font-size: 1.5em; /* Adjust heading size for smaller screens */
+    /* Adjust dropdown menu styling for mobile */
+    .dropdown-content {
+        position: relative;
+        width: 100%;
+        background-color: #4a90e2;
     }
 }
 
@@ -180,38 +193,6 @@ a:hover {
     object-fit: cover;
 }
 
-/* Mobile Navigation Menu */
-.menu-toggle {
-    display: none;
-    text-align: center;
-    padding: 10px;
-    background-color: #4a90e2;
-    color: white;
-    font-size: 1.5em;
-    cursor: pointer;
-}
-
-@media (max-width: 768px) {
-    .menu-toggle {
-        display: block;
-    }
-
-    nav ul {
-        display: none;
-        flex-direction: column;
-        text-align: center;
-    }
-
-    nav ul.show {
-        display: flex;
-    }
-
-    .dropdown-content {
-        position: relative;
-        width: 100%;
-        background-color: #4a90e2;
-    }
-}
 /* Dropdown Menu Styling */
 .dropdown-content {
     display: none;
@@ -252,49 +233,60 @@ a:hover {
     background-color: #357ab9;
 }
 
-        .grading-menu table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 1em;
-        }
-        .grading-menu th, .grading-menu td {
-            padding: 10px;
-            border: 1px solid #ddd;
-            text-align: left;
-        }
-        .grading-menu th {
-            background-color: #4a90e2;
-            color: white;
-        }
-        .expectations-bubble {
-            background-color: #e0f3ff;
-            border: 1px solid #b6e0ff;
-            border-radius: 20px;
-            padding: 15px;
-            margin: 10px 0;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        .expectations-bubble strong {
-            color: #4a90e2;
-            font-size: 1.1em;
-        }
-        .contact-info {
-            margin-top: 2em;
-            padding: 1em;
-            background-color: #f1f1f1;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        .contact-info h2 {
-            color: #4a90e2;
-            margin-bottom: 0.5em;
-        }
-        .contact-info a {
-            color: #4a90e2;
-            text-decoration: none;
-        }
-        .contact-info a:hover {
-            text-decoration: underline;
-        }
-img {max-width:100%;height:auto;}
+.grading-menu table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1em;
+}
 
+.grading-menu th, .grading-menu td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.grading-menu th {
+    background-color: #4a90e2;
+    color: white;
+}
+
+.expectations-bubble {
+    background-color: #e0f3ff;
+    border: 1px solid #b6e0ff;
+    border-radius: 20px;
+    padding: 15px;
+    margin: 10px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.expectations-bubble strong {
+    color: #4a90e2;
+    font-size: 1.1em;
+}
+
+.contact-info {
+    margin-top: 2em;
+    padding: 1em;
+    background-color: #f1f1f1;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info h2 {
+    color: #4a90e2;
+    margin-bottom: 0.5em;
+}
+
+.contact-info a {
+    color: #4a90e2;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
