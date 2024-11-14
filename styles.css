@@ -183,17 +183,17 @@ a:hover {
 /* Mobile Navigation Menu */
 .menu-toggle {
     display: none;
+    text-align: center;
+    padding: 10px;
+    background-color: #4a90e2;
+    color: white;
+    font-size: 1.5em;
+    cursor: pointer;
 }
 
 @media (max-width: 768px) {
     .menu-toggle {
         display: block;
-        text-align: center;
-        padding: 10px;
-        background-color: #4a90e2;
-        color: white;
-        font-size: 1.5em;
-        cursor: pointer;
     }
 
     nav ul {
