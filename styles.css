@@ -27,7 +27,7 @@ header {
     align-items: center;
 }
 
-/* New Section: Navigation Container Styling */
+/* Navigation Container Styling */
 .nav-container {
     position: relative;
     text-align: center;
@@ -88,7 +88,7 @@ nav ul li a:hover {
     display: block;
 }
 
-/* Responsive Layout for Smaller Screens */
+/* Responsive Navigation for Smaller Screens */
 @media (max-width: 768px) {
     .menu-icon {
         display: block;
@@ -109,4 +109,91 @@ nav ul li a:hover {
         position: relative;
         width: 100%;
     }
+}
+
+/* Main Content Styling */
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #4a90e2;
+    margin-bottom: 10px;
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+    font-size: 0.9em;
+    color: #666;
+}
+
+a {
+    color: #4a90e2;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Additional Page-Specific Styling */
+.course-listing {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.course-listing h3 {
+    color: #4a90e2;
+}
+
+.course-listing a {
+    color: #4a90e2;
+    text-decoration: none;
+}
+
+.course-listing a:hover {
+    text-decoration: underline;
+}
+
+.grading-menu table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1em;
+}
+
+.grading-menu th, .grading-menu td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.grading-menu th {
+    background-color: #4a90e2;
+    color: white;
+}
+
+.expectations-bubble {
+    background-color: #e0f3ff;
+    border: 1px solid #b6e0ff;
+    border-radius: 20px;
+    padding: 15px;
+    margin: 10px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
 }
