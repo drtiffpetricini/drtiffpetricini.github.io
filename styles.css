@@ -147,3 +147,41 @@ footer {
     font-size: 0.9em;
     color: #666;
 }
+/* Specific styles for comm335n.html */
+.intro-section {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.grading-menu table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1em;
+}
+
+.grading-menu th, .grading-menu td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.grading-menu th {
+    background-color: #4a90e2;
+    color: white;
+}
+
+.expectations-bubble {
+    background-color: #e0f3ff;
+    border: 1px solid #b6e0ff;
+    border-radius: 20px;
+    padding: 15px;
+    margin: 10px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.collaborative-pact ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
