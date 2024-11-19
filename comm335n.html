@@ -5,160 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>COMM 335N: Media, Social Justice, and the Public Humanities - Liquid Syllabus</title>
     <link rel="stylesheet" href="styles.css">
-    <style>
-        /* Global Reset */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            background-color: #f9f9f9;
-            margin: 20px;
-            color: #333;
-        }
-
-        /* Header Styling */
-        header {
-            background-color: #4a90e2;
-            color: white;
-            text-align: center;
-            padding: 20px;
-        }
-
-        header h1 {
-            font-size: 2em;
-            margin-bottom: 10px;
-        }
-
-        header p {
-            font-size: 1.2em;
-            margin: 5px 0;
-        }
-
-        /* Navigation Styling */
-        .nav-container {
-            text-align: center;
-            background-color: #4a90e2;
-            padding: 10px 0;
-        }
-
-        .menu-icon {
-            display: none;
-            font-size: 1.5em;
-            color: white;
-            cursor: pointer;
-        }
-
-        nav ul {
-            display: flex;
-            justify-content: center;
-            list-style: none;
-        }
-
-        nav ul li {
-            margin: 0 15px;
-        }
-
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        nav ul li a:hover {
-            text-decoration: underline;
-        }
-
-        @media (max-width: 768px) {
-            .menu-icon {
-                display: block;
-            }
-
-            nav ul {
-                display: none;
-                flex-direction: column;
-                text-align: center;
-            }
-
-            nav ul.active {
-                display: flex;
-            }
-        }
-
-        /* Section Styling */
-        section {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
-            background: white;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        section h2 {
-            text-align: center;
-            color: #4a90e2;
-            margin-bottom: 15px;
-        }
-
-        .decorative-image {
-            max-width: 100%;
-            height: auto;
-            border-radius: 8px;
-            display: block;
-            margin: 20px auto;
-        }
-
-        ul {
-            margin-left: 20px;
-            list-style-type: disc;
-        }
-
-        ul li {
-            margin-bottom: 10px;
-        }
-
-        /* Grading Menu Table */
-        .grading-menu table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-        }
-
-        .grading-menu th, .grading-menu td {
-            padding: 10px;
-            border: 1px solid #ddd;
-            text-align: left;
-        }
-
-        .grading-menu th {
-            background-color: #4a90e2;
-            color: white;
-        }
-
-        /* Expectations Bubble Styling */
-        .expectations-bubble {
-            background-color: #e0f3ff;
-            border: 1px solid #b6e0ff;
-            border-radius: 10px;
-            padding: 15px;
-            margin: 10px 0;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        /* Footer Styling */
-        footer {
-            text-align: center;
-            margin-top: 20px;
-            padding: 10px;
-            font-size: 0.9em;
-            color: #666;
-        }
-    </style>
 </head>
 <body>
 
@@ -166,30 +12,31 @@
         <h1>Welcome to COMM 335N</h1>
         <p>Media, Social Justice, and the Public Humanities</p>
         <p>Penn State Erie</p>
+    
 
-        <div class="nav-container">
-            <span class="menu-icon" onclick="toggleMenu()">☰ Menu</span>
-            <nav>
-                <ul class="main-nav">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="publications.html">Publications</a></li>
-                    <li><a href="media.html">Media Appearances</a></li>
-                    <li><a href="projects.html">Projects</a></li>
-                    <li><a href="class-pages.html">Class Pages</a></li>
-                    <li><a href="philosophy.html">Teaching Philosophy</a></li>
-                    <li class="dropdown">
-                        <a href="#">Course Policies</a>
-                        <ul class="dropdown-content">
-                            <li><a href="classaiassignment.html">AI Policies</a></li>
-                            <li><a href="attendance.html">Attendance Policies</a></li>
-                            <li><a href="behrendcampuspolicies.html">Campus Policies</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </nav>
-        </div>
+    <!-- Responsive Navigation Menu -->
+    <div class="nav-container">
+        <span class="menu-icon" onclick="toggleMenu()">☰ Menu</span>
+        <nav>
+            <ul class="main-nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="publications.html">Publications</a></li>
+                <li><a href="media.html">Media Appearances</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="class-pages.html">Class Pages</a></li>
+                <li><a href="philosophy.html">Teaching Philosophy</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">Course and Campus Policies</a>
+                    <ul class="dropdown-content">
+                        <li><a href="classaiassignment.html">Course AI and Assignment Policies</a></li>
+                        <li><a href="attendance.html">Attendance, Absence and Zoom Policies</a></li>
+                        <li><a href="behrendcampuspolicies.html">Behrend Campus Policies</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </div>
     </header>
-
     <main>
         <section class="intro-section">
             <h2>Welcome!</h2>
@@ -200,10 +47,20 @@
 
         <section class="course-details">
             <h2>How This Course Works</h2>
+            <p>COMM 335N is a structured yet flexible 16-week course designed to engage you in active learning, creative expression, and community involvement. Here’s a breakdown of what to expect and how to make the most of your experience:</p>
             <ul>
-                <li><strong>Class Structure:</strong> Tuesdays & Thursdays, 1:35 PM - 2:50 PM in Lilley Library/Kochel 060.</li>
-                <li><strong>Weekly Modules:</strong> Modules on Canvas include readings, assignments, and prompts.</li>
-                <li><strong>Assignments:</strong> Weekly Reading Preps, Hands-on Projects, and Peer Feedback.</li>
+                <li><strong>Class Structure:</strong> We meet in person on Tuesdays and Thursdays from 1:35 PM to 2:50 PM in Lilley Library/Kochel 060.</li>
+                <li><strong>Weekly Modules:</strong> Each week’s module on Canvas will include readings, assignments, and prompts to guide your learning.</li>
+                <li><strong>Assignments:</strong> You’ll engage with a range of assignments, including:
+                    <ul>
+                        <li>Weekly Reading Preps that connect course materials to your personal reflections.</li>
+                        <li>Hands-on Projects exploring social justice issues.</li>
+                        <li>Peer Feedback and Group Work to foster collaboration.</li>
+                    </ul>
+                </li>
+                <li><strong>Grading:</strong> Control your learning goals through our grading menu.</li>
+                <li><strong>My Role and Your Role:</strong> My goal is to support your learning journey by providing resources, feedback, and encouragement. Your role is to actively participate, complete assignments, and communicate openly.</li>
+                <li><strong>Flexibility and Support:</strong> If you need an extension or extra help, please reach out to me as soon as possible.</li>
             </ul>
         </section>
 
@@ -217,34 +74,63 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr><td>A</td><td>Complete all 8 assignments at “meets expectations” or higher.</td></tr>
-                    <tr><td>B</td><td>Complete at least 7 assignments at “meets expectations” or higher.</td></tr>
+                    <tr>
+                        <td>A (100%)</td>
+                        <td>Complete all 8 assignments at “meets expectations” or higher, including all weekly reading preps and the final project.</td>
+                    </tr>
+                    <tr>
+                        <td>B (80-89%)</td>
+                        <td>Complete at least 7 of the 8 assignments at “meets expectations” or higher, including the final project.</td>
+                    </tr>
+                    <tr>
+                        <td>C (70-79%)</td>
+                        <td>Complete at least 6 of the 8 assignments at “meets expectations” or higher.</td>
+                    </tr>
+                    <tr>
+                        <td>D (60-69%)</td>
+                        <td>Complete 5 of the 8 assignments at a basic or higher level.</td>
+                    </tr>
+                    <tr>
+                        <td>F (below 60%)</td>
+                        <td>Complete fewer than 5 assignments or fall below the basic level on completed assignments.</td>
+                    </tr>
                 </tbody>
             </table>
         </section>
 
-        <section class="collaborative-pact">
-            <h2>Collaborative Pact</h2>
-            <ul>
-                <li><strong>Respect:</strong> Value diverse perspectives.</li>
-                <li><strong>Support:</strong> Foster courage and learning.</li>
-            </ul>
+        <section class="expectations-guide">
+            <h2>Expectations Guide</h2>
+            <div class="expectations-bubble">
+                <strong>Exceeds Expectations:</strong> Demonstrates a deep understanding and application of course concepts with creative or thorough engagement.
+            </div>
+            <div class="expectations-bubble">
+                <strong>Meets Expectations:</strong> Shows good understanding of concepts and fulfills all assignment requirements.
+            </div>
+            <div class="expectations-bubble">
+                <strong>Basic:</strong> Covers the assignment requirements but lacks depth or full engagement with the material.
+            </div>
+            <div class="expectations-bubble">
+                <strong>Does Not Meet Expectations:</strong> Does not adequately address the assignment requirements or demonstrates minimal understanding.
+            </div>
         </section>
 
         <section class="contact-info">
-            <h2>Contact Me</h2>
-            <p>Email: <a href="mailto:tzr106@psu.edu">tzr106@psu.edu</a></p>
+            <h2>How to Reach Me</h2>
+            <p><strong>Professor:</strong> Dr. Tiffany A. Petricini</p>
+            <p><strong>Email:</strong> <a href="mailto:tzr106@psu.edu">tzr106@psu.edu</a></p>
+            <p><strong>Office Hours:</strong> Tuesdays and Thursdays from 10:00 AM - 12:00 PM or by appointment on Zoom</p>
+            <p><strong>Instructor Response Time:</strong> I typically respond to emails within 24 hours on weekdays.</p>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2024 Tiffany Petricini</p>
+        <p>&copy; 2024 Tiffany Petricini | COMM 335N</p>
     </footer>
 
-    <script>
+   <script>
         function toggleMenu() {
-            const mainNav = document.querySelector('.main-nav');
-            mainNav.classList.toggle('active');
+            const navContainer = document.querySelector('.nav-container');
+            navContainer.classList.toggle('active');
         }
     </script>
 </body>
